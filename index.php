@@ -71,7 +71,7 @@
             const now = new Date();
             const hoursAndMinutes = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
 
-            // let arr = ["Asdad","Fgdfg","Fgdfg","Fgdfg","Fgdfg"]
+            
             for (let i = 0; i < array.length; i++) {
 
                 let div = document.createElement('div');
@@ -91,14 +91,13 @@
 
                 $(".list_nav").append(div);
             }
-            analyze();
         })
 
     }
 
     $(function(){
         
-        analyze();
+        setInterval(analyze,1000);
 
         $("#start").on("click",function(){
             $("#video").attr("src","http://127.0.0.1:5000/face_emotion")
