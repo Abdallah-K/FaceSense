@@ -59,7 +59,9 @@
     var array = [];
     
     function analyze(){
-        fetch(`python_api/data.txt`)
+        var n = new Date();
+        const ca = n.getSeconds();
+        fetch(`python_api/data.txt?v=${ca}`)
         .then(response => response.text())
         .then(data =>{
             if (!array.includes(data)) {
